@@ -1,0 +1,30 @@
+{
+  "name": "fs_project2_restapi",
+  "version": "1.0.0",
+  "description": "Full Stack -sovelluskehitys TO00BS65-3006 Rest -harjoitus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fin-nidhogg/fs_project2_restapi.git"
+  },
+  "keywords": [
+    "rest",
+    "node",
+    "express"
+  ],
+  "author": "Ari-Pekka Kantola",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/fin-nidhogg/fs_project2_restapi/issues"
+  },
+  "homepage": "https://github.com/fin-nidhogg/fs_project2_restapi#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2"
+  }
+}

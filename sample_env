@@ -1,0 +1,22 @@
+# After cloning the repository, fill all info and rename this file to .env
+
+############################################
+# DB Related settings
+############################################
+
+# Database hostname ie cluster0.cnpjxzu.mongodb.net/
+DB_HOSTNAME=CHANGE_ME
+
+# Your database name
+DB_NAME=CHANGE_ME
+
+# db user and password
+DB_USER=CHANGE_ME
+DB_PASSWORD=CHANGE_ME
+
+############################################
+# Server settings
+############################################
+
+# This can be any port you want to run your server on
+SERVER_PORT=3000
