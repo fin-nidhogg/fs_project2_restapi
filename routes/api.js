@@ -147,7 +147,6 @@ router.put('/:id', async (req, res) => {
 });
 
 
-
 ///////////////////////////////////////////////////
 // Exportataan router, jotta se voidaan ottaa käyttöön muualla sovelluksessa
 ///////////////////////////////////////////////////
