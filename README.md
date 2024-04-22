@@ -2,31 +2,19 @@
 
 # Sisällysluettelo
 
-[1 Yleistä tietoa projektista
-[3](#yleistä-tietoa-projektista)](#yleistä-tietoa-projektista)
+[1 Yleistä tietoa projektista](#yleistä-tietoa-projektista)
 
-[2 Käytettyjä tekniikoita ja erikoisuuksia
-[3](#käytettyjä-tekniikoita-ja-erikoisuuksia)](#käytettyjä-tekniikoita-ja-erikoisuuksia)
+[2 Käytettyjä tekniikoita ja erikoisuuksia](#käytettyjä-tekniikoita-ja-erikoisuuksia)
 
-[3 Sivuston / ohjelmiston design ja rakenne
-[4](#sivuston-ohjelmiston-design-ja-rakenne)](#sivuston-ohjelmiston-design-ja-rakenne)
+[3 Sivuston/ohjelmiston design ja rakenne](#sivuston-ohjelmiston-design-ja-rakenne)
 
-[4 Oma arvio työstä ja oman osaamisen kehittymisestä
-[5](#_Toc164690118)](#_Toc164690118)
+[4 Linkit](#linkit)
 
-[5 Palaute opettajalle kurssista sekä itse opetuksesta tähän saakka
-[5](#_Toc164690119)](#_Toc164690119)
+[6.1 Verkkosivuni osoite](#verkkosivuni-osoite)
 
-[6 Linkit [5](#linkit)](#linkit)
+[6.2 Linkki GitHub repositorioon](#linkki-github-repositorioon)
 
-[6.1 Verkkosivuni osoite
-[5](#verkkosivuni-osoite)](#verkkosivuni-osoite)
-
-[6.2 Linkki GitHub repositorioon
-[5](#linkki-github-repositorioon)](#linkki-github-repositorioon)
-
-[6.3 Linkki projektin videoesitykseen
-[5](#linkki-projektin-videoesitykseen)](#linkki-projektin-videoesitykseen)
+[6.3 Linkki projektin videoesitykseen](#linkki-projektin-videoesitykseen)
 
 # Yleistä tietoa projektista
 
