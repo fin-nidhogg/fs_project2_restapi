@@ -23,7 +23,8 @@ validointia, jolloin toiminnallisuudet ovat varsin riittävät.
   
 Dokumentit tallennetaan haluttuun dokumenttikokoelmaan seuraavanlaisessa
 muodossa:  
-  
+
+```
 {  
 "name": "Uusi tapahtuma",  
 "date": "2022-12-31",  
@@ -31,7 +32,7 @@ muodossa:
 "description": "Tämä on uusi tapahtuma",  
 "published_until": "2022-12-30"  
 }
-
+```   
 # Käytettyjä tekniikoita ja erikoisuuksia
 
 Projektissa ei varsinaisesti ole alalta poikkeavia erikoisuuksia.
@@ -63,14 +64,16 @@ luonnollisesti käyttäjälle olisi hyvä jotain palauttaa. Kaikkiin GET
 pyyntöihin saadaan joko pyydetyt tulokset JSON-tulokset tai huomautus,
 että kyseessä on rajapinta eikä selaimella käytettävä verkkosivu. API
 Koostuu seuraavista reiteistä:  
-  
-**GET /api/all**  
+
+**GET /api/all**
+
 Tämä reitti palauttaa kaikki tapahtumat. Voit testata tätä joko suoraan
 selaimella tai Postmanilla valitsemalla "GET" pudotusvalikosta ja
 kirjoittamalla URL-osoitteeksi
 https://fs-project2-restapi.onrender.com/api/all  
-  
-**GET /api/:id**  
+
+**GET /api/:id**    
+
 Tämä reitti palauttaa yksittäisen tapahtuman perustuen id:hen. Voit
 testata tätä suoraan selaimella tai Postmanilla valitsemalla "GET"
 pudotusvalikosta ja kirjoittamalla URL-osoitteeksi
@@ -84,14 +87,16 @@ URL-osoitteeksi
 https://fs-project2-restapi.onrender.com/api/123456789012, missä
 123456789012 on päivitettävän tapahtuman id. Lisää "Body" osioon
 JSON-muotoinen päivitys, esimerkiksi:  
-  
+
+```
 {  
 "name": "Päivitetty tapahtuma",  
 "date": "2022-12-31",  
 "location": "Helsinki",  
 "description": "Tämä on päivitetty tapahtuma",  
 "published_until": "2022-12-30"  
-}  
+}
+```   
   
 **Huomioitavaa päivityksessä on, ettei kaikkia tietoja ole pakko
 päivittää vaan voidaan antaa vain ne arvot jotka halutaan. Esimerkiksi
@@ -107,11 +112,11 @@ https://fs-project2-restapi.onrender.com/api/delete/123456789012, missä
 # Linkit
 
 ## Verkkosivuni osoite
-
+```
 https://fs-project2-restapi.onrender.com/
-
+```
 ## Linkki GitHub repositorioon
-
+```
 https://github.com/fin-nidhogg/fs_project2_restapi
-
+```
 ## Linkki projektin videoesitykseen
