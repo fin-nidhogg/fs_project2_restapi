@@ -1,20 +1,14 @@
-**Full Stack Projektiraportti: T2 REST API**
+# Full Stack projektina REST API
 
-# Sisällysluettelo
+## Sisällysluettelo
 
-[1 Yleistä tietoa projektista](#yleistä-tietoa-projektista)
-
-[2 Käytettyjä tekniikoita ja erikoisuuksia](#käytettyjä-tekniikoita-ja-erikoisuuksia)
-
-[3 Sivuston/ohjelmiston design ja rakenne](#sivuston-ohjelmiston-design-ja-rakenne)
-
-[4 Linkit](#linkit)
-
-[6.1 Verkkosivuni osoite](#verkkosivuni-osoite)
-
-[6.2 Linkki GitHub repositorioon](#linkki-github-repositorioon)
-
-[6.3 Linkki projektin videoesitykseen](#linkki-projektin-videoesitykseen)
+[1 Yleistä tietoa projektista](#yleistä-tietoa-projektista)    
+[2 Käytettyjä tekniikoita ja erikoisuuksia](#käytettyjä-tekniikoita-ja-erikoisuuksia)     
+[3 Design ja rakenne](#design-ja-rakenne)    
+[4 Linkit](#linkit)    
+[4.1 Verkkosivuni osoite](#verkkosivuni-osoite)    
+[4.2 Linkki GitHub repositorioon](#linkki-github-repositorioon)    
+[4.3 Linkki projektin videoesitykseen](#linkki-projektin-videoesitykseen)    
 
 # Yleistä tietoa projektista
 
@@ -61,7 +55,7 @@ kyselyrakentamisen ja paljon muuta. Valmiiden toiminnallisuuksien takia
 Mongoose helpottaa MongoDB-tietokantojen hallintaa ja käsittelyä
 merkittävästi.
 
-# Sivuston / ohjelmiston design ja rakenne
+# Design ja rakenne
 
 API:lla ei ole varsinaista käyttöliittymää. Kuitenkin joku saattaa eksyä
 selaimella sovelluksen tarjoamiin osoitepolkuihin, jolloin
