@@ -22,6 +22,14 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', apiroutes);
 
+///////////////////////////////////////////////////
+// Default reitti jollei muuta löydy
+///////////////////////////////////////////////////
+
+app.get('*', (req, res) => {
+    res.send('There\'s nothing here! You should not be here!</br>All functionality is in the <b>/api</b> route and should be accessed through requests made programmatically.');
+});
+
 
 ///////////////////////////////////////////////////
 // Käynnistetään serveri
