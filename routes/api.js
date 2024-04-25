@@ -32,7 +32,6 @@ router.post('/add', async (req, res) => {
     } = req.body;
 
     console.log(`\nGET DOWN! Data incoming:\n ${JSON.stringify(req.body)}`)
-
     try {
         const event = new Event({
             name: name,
@@ -43,12 +42,13 @@ router.post('/add', async (req, res) => {
         });
 
         await event.save();
-        res.status(201).send(`${event.name} added successfully!`);
+        const message = `${event.name} added successfully!`;
+        res.status(201).json({ message });
         console.log(`\nSUCCESS: Event added to database:\n${event}`);
     }
-    catch (err) {
+    catch (error) {
         console.log(err);
-        res.status(500).send(err);
+        res.status(500).send(error);
     }
 });
 
@@ -59,16 +59,17 @@ router.post('/add', async (req, res) => {
 router.delete('/delete/:id', async (req, res) => {
     const { id } = req.params;
     if (id.length !== 24) {
-        return res.status(404).send('Event not found\nCheck the event id and try again!');
+        return res.status(404).json({ "message": "Wrongly formated document id" });
     }
     else {
         try {
             const event = await Event.findByIdAndDelete(id)
             if (!event) {
-                return res.status(404).send('Event not found\nCheck the event id and try again!');
+                return res.status(404).json({ "message": "Event not found" });
             } else {
-                res.status(200).send(`Event with ID ${id} deleteted succesfully\n\n${event}`);
-                console.log(`SUCCESS: Event with ID ${id} destroyed:\n${event}`);
+                const message = `Event with ID ${id} deleteted succesfully`;
+                res.status(200).json({ message });
+                console.log(`\nSUCCESS: Event with ID ${id} destroyed: \n\n${event} `);
             }
         }
         catch (error) {
@@ -85,16 +86,16 @@ router.delete('/delete/:id', async (req, res) => {
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
     if (id.length !== 24) {
-        return res.status(404).send('Event not found\nCheck the event id and try again!');
+        return res.status(404).json({ "message": "Wrongly formated document id" });
     }
     else {
         try {
             const event = await Event.findById(id)
             if (!event) {
-                return res.status(404).send('Event not found\nCheck the event id and try again!');
+                return res.status(404).json({ "message": "Event with given ID not found" });
             } else {
                 res.status(200).send(event);
-                console.log(`OK Here's your event data:\n ${event}`);
+                console.log(`\nOK Here's your event data:\n\n ${event}`);
             }
         }
         catch (error) {
@@ -111,7 +112,7 @@ router.get('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
     const { id } = req.params;
     if (id.length !== 24) {
-        return res.status(404).send('Event not found\nCheck the event id and try again!');
+        return res.status(404).json({ "message": "Wrongly formated document id" });
     }
     else {
         const {
@@ -132,11 +133,11 @@ router.put('/:id', async (req, res) => {
             }, { new: true });
 
             if (!event) {
-                return res.status(404).send('Event not found\nCheck the event id and try again!');
+                return res.status(404).json({ "message": "Event with given ID not found" });
             }
-
-            res.status(200).send(event);
-            console.log(`Getting updated info:\n \n ${event}`);
+            const message = `Event ${event.name} with ID ${id} updated succesfully`
+            res.status(200).json({ message });
+            console.log(`Incoming update data:\n \n ${event}`);
             console.log(`\nSUCCESS: you updated event with id: ${id}`);
         }
         catch (error) {

@@ -6,6 +6,7 @@ require('dotenv').config();
 const express = require('express');
 const db = require('./db');
 const apiroutes = require('./routes/api');
+const { errorHandler } = require('./middleware/errors.middleware');
 
 ///////////////////////////////////////////////////
 // Luodaan express sovellus ja määritetään middlewaret
@@ -21,15 +22,16 @@ app.use(express.urlencoded({ extended: true }));
 ///////////////////////////////////////////////////
 
 app.use('/api', apiroutes);
+app.use(errorHandler);
 
 ///////////////////////////////////////////////////
-// Default reitti jollei muuta löydy
+// Default reititykset virheellisille osoitteille
 ///////////////////////////////////////////////////
 
-app.get('*', (req, res) => {
-    res.send('There\'s nothing here! You should not be here!</br>All functionality is in the <b>/api</b> route and should be accessed through requests made programmatically.');
+app.all('*', (req, res) => {
+    const message = 'Invalid URL in request, please check the URL and try again.';
+    res.status(404).json({ message });
 });
-
 
 ///////////////////////////////////////////////////
 // Käynnistetään serveri

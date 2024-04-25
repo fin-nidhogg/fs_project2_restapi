@@ -5,6 +5,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD
 
 const db = mongoose.connection;
 
+// Avataan yhteys tai virheen tapahtuessa tulostetaan virheilmoitus
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     console.log('Database connection established successfully');
