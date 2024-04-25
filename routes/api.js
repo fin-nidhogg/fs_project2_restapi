@@ -56,7 +56,7 @@ router.post('/add', async (req, res) => {
 // Reitti dokumentin poistamiseksi tietokannasta
 ///////////////////////////////////////////////////
 
-router.delete('/delete/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     const { id } = req.params;
     if (id.length !== 24) {
         return res.status(404).json({ "message": "Wrongly formated document id" });
