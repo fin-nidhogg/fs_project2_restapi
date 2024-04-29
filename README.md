@@ -125,3 +125,6 @@ https://github.com/fin-nidhogg/fs_project2_restapi
 ```
 
 ## Linkki projektin videoesitykseen
+```
+https://video.laurea.fi/media/Full+Stack+-sovelluskehitys+REST+API+-projekti/0_4dmcd08b
+```
